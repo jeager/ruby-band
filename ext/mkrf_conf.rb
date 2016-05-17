@@ -55,7 +55,6 @@ RAKE
     if command?("mvn")==false
       rakefile.write <<-RAKE
   	    task :apt_install do
-         # sh "sudo apt-get install maven2"
         end
         task :default => [:apt_install]
       RAKE
