@@ -52,14 +52,13 @@ File.open(File.join(path,"Rakefile"),"w") do |rakefile|
       RAKE
     end
   elsif OS.linux? == true
-    =begin
-if command?("mvn")==false
-      rakefile.write <<-RAKE
-      task :apt_install do
-      end
-      task :default => [:apt_install]
-      RAKE
-    else=end
+    # if command?("mvn")==false
+    #   rakefile.write <<-RAKE
+    #   task :apt_install do
+    #   end
+    #   task :default => [:apt_install]
+    #   RAKE
+    # else
 
       rakefile.write <<-RAKE
       task :ok_inst do
@@ -67,6 +66,6 @@ if command?("mvn")==false
       end
       task :default => [:ok_inst]
       RAKE
-    #end
+      #end
+    end
   end
-end
